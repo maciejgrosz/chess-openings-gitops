@@ -13,8 +13,4 @@ spec:
     path: ./cert-manager
     repoURL: 'https://github.com/maciejgrosz/chess-openings-helmcharts.git'
     targetRevision: HEAD
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
   project: default
