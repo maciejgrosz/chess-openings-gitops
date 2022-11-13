@@ -11,7 +11,7 @@ spec:
     server: https://kubernetes.default.svc
   source:
     path: ./nginx
-    repoURL: 'https://github.com/maciejgrosz/chess-openings-helmcharts'
+    repoURL: 'https://github.com/maciejgrosz/chess-openings-helmcharts.git'
     targetRevision: HEAD
   syncPolicy:
     automated:
