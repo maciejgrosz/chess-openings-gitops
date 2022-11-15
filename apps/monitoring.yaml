@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: monitoring
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: default
+    server: https://kubernetes.default.svc
+  source:
+    path: ./kube-prometheus-stack
+    repoURL: 'https://github.com/maciejgrosz/chess-openings-helmcharts.git'
+    targetRevision: HEAD
+  project: default
