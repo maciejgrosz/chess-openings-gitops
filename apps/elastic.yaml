@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: efk
+  name: elastic
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
@@ -10,10 +10,10 @@ spec:
     namespace: default
     server: https://kubernetes.default.svc
   source:
-    path: ./efk
+    path: ./efk/charts/elasticsearch
     repoURL: 'https://github.com/maciejgrosz/chess-openings-helmcharts.git'
     targetRevision: HEAD
-    directory:
-      recurse: true 
+    # directory:
+    #   recurse: true 
 
   project: default
