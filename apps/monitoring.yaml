@@ -14,3 +14,11 @@ spec:
     repoURL: 'https://github.com/maciejgrosz/chess-openings-helmcharts.git'
     targetRevision: HEAD
   project: default
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+      - Replace=true
+    automated:
+      prune: true
+      selfHeal: true
+
