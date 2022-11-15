@@ -13,4 +13,6 @@ spec:
     path: ./efk
     repoURL: 'https://github.com/maciejgrosz/chess-openings-helmcharts.git'
     targetRevision: HEAD
+    recurse: true 
+
   project: default
